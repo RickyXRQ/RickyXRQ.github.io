@@ -300,6 +300,59 @@
 
 
   
+    <article id="post-Extmail中删除用户若干天前的文件" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/05/11/Extmail中删除用户若干天前的文件/" class="article-date">
+  	<time datetime="2015-05-11T13:38:41.000Z" itemprop="datePublished">2015-05-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/11/Extmail中删除用户若干天前的文件/">Extmail中删除用户若干天前的文件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>���ȣ���rootȨ���£����Բ����������Է������ϵ��û������ʼ���С�������������磬ʹ������ָ������ȡ��ռ�ÿռ�������10���û���<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ du <span class="operator">-s</span> /home/domains/wspn.com/ *|sort -rn|head</span><br></pre></td></tr></table></figure></p>
+<p>���õ������б�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5020</span> /home/domains/wspn.com/pengtao</span><br><span class="line"><span class="number">3612</span> /home/domains/wspn.com/zhupengbo</span><br><span class="line"><span class="number">1768</span> /home/domains/wspn.com/liulibin</span><br><span class="line"><span class="number">216</span>  /home/domains/wspn.com/xuruiqiang</span><br><span class="line"><span class="number">168</span>  /home/domains/wspn.com/xiaoshan</span><br><span class="line"><span class="number">168</span>  /home/domains/wspn.com/gejiajun</span><br><span class="line"><span class="number">132</span>  /home/domains/wspn.com/rickyxrq</span><br><span class="line"><span class="number">132</span>  /home/domains/wspn.com/fengyudong</span><br><span class="line"><span class="number">128</span>  /home/domains/wspn.com/zhangjiayue</span><br><span class="line"><span class="number">124</span>  /home/domains/wspn.com/wangzhe</span><br></pre></td></tr></table></figure></p>
+<p>֮�󣬽�����Ӧ�û�Ŀ¼��ִ����������ɣ�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find -ctime +<span class="number">30</span> | xargs rm</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
   
 </div>
       <footer id="footer">
