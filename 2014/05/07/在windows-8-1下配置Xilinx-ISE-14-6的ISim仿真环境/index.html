@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/5 | Ricky&#39;s Hexo</title>
+  <title>在windows 8.1下配置Xilinx ISE 14.6的ISim仿真环境 | Ricky&#39;s Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ricky&apos;s Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ricky's Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2015/05/index.html">
+  <meta name="description" content="windows 8.1下的Xilinx ISE 14.6无法成功地调用自带的ISim模拟器，报错结果如下：12345$ Time Resolution for simulation is 1ps.$ Waiting for 3 sub-compilation(s) to finish…$ ERROR:Simulator:861 – Failed to link the design$ Proces">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在windows 8.1下配置Xilinx ISE 14.6的ISim仿真环境">
+<meta property="og:url" content="http://yoursite.com/2014/05/07/在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境/index.html">
 <meta property="og:site_name" content="Ricky's Hexo">
-<meta property="og:description" content="Ricky&apos;s Blog">
+<meta property="og:description" content="windows 8.1下的Xilinx ISE 14.6无法成功地调用自带的ISim模拟器，报错结果如下：12345$ Time Resolution for simulation is 1ps.$ Waiting for 3 sub-compilation(s) to finish…$ ERROR:Simulator:861 – Failed to link the design$ Proces">
+<meta property="og:updated_time" content="2015-08-25T14:29:58.884Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ricky's Hexo">
-<meta name="twitter:description" content="Ricky&apos;s Blog">
+<meta name="twitter:title" content="在windows 8.1下配置Xilinx ISE 14.6的ISim仿真环境">
+<meta name="twitter:description" content="windows 8.1下的Xilinx ISE 14.6无法成功地调用自带的ISim模拟器，报错结果如下：12345$ Time Resolution for simulation is 1ps.$ Waiting for 3 sub-compilation(s) to finish…$ ERROR:Simulator:861 – Failed to link the design$ Proces">
   
     <link rel="alternative" href="/atom.xml" title="Ricky&#39;s Hexo" type="application/atom+xml">
   
@@ -184,53 +185,108 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/05/11/Extmail中删除用户若干天前的文件/" class="archive-article-date">
-  	<time datetime="2015-05-11T13:38:41.000Z" itemprop="datePublished">May 11</time>
+    <div class="article-meta">
+      <a href="/2014/05/07/在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境/" class="article-date">
+  	<time datetime="2014-05-07T14:25:11.000Z" itemprop="datePublished">2014-05-07</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/11/Extmail中删除用户若干天前的文件/">Extmail中删除服务器中用户若干天前的邮件</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      在windows 8.1下配置Xilinx ISE 14.6的ISim仿真环境
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>windows 8.1下的Xilinx ISE 14.6无法成功地调用自带的ISim模拟器，报错结果如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ Time Resolution <span class="keyword">for</span> simulation is <span class="number">1</span>ps.</span><br><span class="line">$ Waiting <span class="keyword">for</span> <span class="number">3</span> sub-compilation(s) to finish…</span><br><span class="line"></span><br><span class="line">$ ERROR:Simulator:<span class="number">861</span> – Failed to link the design</span><br><span class="line">$ Process “Simulate Behavioral Model” failed</span><br></pre></td></tr></table></figure></p>
+<p>经过近一天的摸索，发现原因是ISim调用的是安装Xilinx ISE 14.6自带的MinGW来link的，而Windows 8.1不支持低版本的MinGW。为了能成功调用ISim，需要更新MinGW，默认的MinGW的安装路径是…\Xilinx\14.4\ISE_DS\ISE\gnu\MinGW\5.0.0\nt。新版本的MinGW的下载地址为：<a href="http://sourceforge.net/projects/mingw/files/OldFiles/MinGW%205.1.4/MinGW-5.1.4.exe/download?use_mirror=iweb" target="_blank" rel="external">http://sourceforge.net/projects/mingw/files/OldFiles/MinGW%205.1.4/MinGW-5.1.4.exe/download?use_mirror=iweb</a>. 下载成功后安装并且将安装内容替换Xilinx ISE 14.6安装后自带的MingGW即可。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/05/11/Extmail中删除用户若干天前的文件/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Extmail中删除服务器中用户若干天前的邮件
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境" data-title="在windows 8.1下配置Xilinx ISE 14.6的ISim仿真环境" data-url="http://yoursite.com/2014/05/07/在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -256,8 +312,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

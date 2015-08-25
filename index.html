@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a>
 					</div>
 				</section>
 				
@@ -328,8 +328,6 @@
       
         <p>首先，在root权限下，可以采用命令来对服务器上的用户根据邮件大小进行排序。例如，使用如下指令可以取出占用空间最大的10个用户：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ du <span class="operator">-s</span> /home/domains/wspn.com/ *|sort -rn|head</span><br></pre></td></tr></table></figure></p>
 <p>会得到如下列表：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5020</span> /home/domains/wspn.com/pengtao</span><br><span class="line"><span class="number">3612</span> /home/domains/wspn.com/zhupengbo</span><br><span class="line"><span class="number">1768</span> /home/domains/wspn.com/liulibin</span><br><span class="line"><span class="number">216</span>  /home/domains/wspn.com/xuruiqiang</span><br><span class="line"><span class="number">168</span>  /home/domains/wspn.com/xiaoshan</span><br><span class="line"><span class="number">168</span>  /home/domains/wspn.com/gejiajun</span><br><span class="line"><span class="number">132</span>  /home/domains/wspn.com/rickyxrq</span><br><span class="line"><span class="number">132</span>  /home/domains/wspn.com/fengyudong</span><br><span class="line"><span class="number">128</span>  /home/domains/wspn.com/zhangjiayue</span><br><span class="line"><span class="number">124</span>  /home/domains/wspn.com/wangzhe</span><br></pre></td></tr></table></figure></p>
-<p>之后，进入相应用户目录，执行下列命令即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find -ctime +<span class="number">30</span> | xargs rm</span><br></pre></td></tr></table></figure></p>
-
       
     </div>
     
@@ -338,6 +336,66 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/05/11/Extmail中删除用户若干天前的文件/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/05/07/在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境/" class="article-date">
+  	<time datetime="2014-05-07T14:25:11.000Z" itemprop="datePublished">2014-05-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/05/07/在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境/">在windows 8.1下配置Xilinx ISE 14.6的ISim仿真环境</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>windows 8.1下的Xilinx ISE 14.6无法成功地调用自带的ISim模拟器，报错结果如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ Time Resolution <span class="keyword">for</span> simulation is <span class="number">1</span>ps.</span><br><span class="line">$ Waiting <span class="keyword">for</span> <span class="number">3</span> sub-compilation(s) to finish…</span><br><span class="line"></span><br><span class="line">$ ERROR:Simulator:<span class="number">861</span> – Failed to link the design</span><br><span class="line">$ Process “Simulate Behavioral Model” failed</span><br></pre></td></tr></table></figure></p>
+<p>经过近一天的摸索，发现原因是ISim调用的是安装Xilinx ISE 14.6自带的MinGW来link的，而Windows 8.1不支持低版本的MinGW。为了能成功调用ISim，需要更新MinGW，默认的MinGW的安装路径是…\Xilinx\14.4\ISE_DS\ISE\gnu\MinGW\5.0.0\nt。新版本的MinGW的下载地址为：<a href="http://sourceforge.net/projects/mingw/files/OldFiles/MinGW%205.1.4/MinGW-5.1.4.exe/download?use_mirror=iweb" target="_blank" rel="external">http://sourceforge.net/projects/mingw/files/OldFiles/MinGW%205.1.4/MinGW-5.1.4.exe/download?use_mirror=iweb</a>. 下载成功后安装并且将安装内容替换Xilinx ISE 14.6安装后自带的MingGW即可。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
 	</div>
 
       
