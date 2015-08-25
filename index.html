@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a>
 					</div>
 				</section>
 				
@@ -317,7 +317,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/11/Extmail中删除用户若干天前的文件/">Extmail中删除用户若干天前的文件</a>
+      <a class="article-title" href="/2015/05/11/Extmail中删除用户若干天前的文件/">Extmail中删除服务器中用户若干天前的邮件</a>
     </h1>
   
 
@@ -326,9 +326,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>���ȣ���rootȨ���£����Բ����������Է������ϵ��û������ʼ���С�������������磬ʹ������ָ������ȡ��ռ�ÿռ�������10���û���<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ du <span class="operator">-s</span> /home/domains/wspn.com/ *|sort -rn|head</span><br></pre></td></tr></table></figure></p>
-<p>���õ������б�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5020</span> /home/domains/wspn.com/pengtao</span><br><span class="line"><span class="number">3612</span> /home/domains/wspn.com/zhupengbo</span><br><span class="line"><span class="number">1768</span> /home/domains/wspn.com/liulibin</span><br><span class="line"><span class="number">216</span>  /home/domains/wspn.com/xuruiqiang</span><br><span class="line"><span class="number">168</span>  /home/domains/wspn.com/xiaoshan</span><br><span class="line"><span class="number">168</span>  /home/domains/wspn.com/gejiajun</span><br><span class="line"><span class="number">132</span>  /home/domains/wspn.com/rickyxrq</span><br><span class="line"><span class="number">132</span>  /home/domains/wspn.com/fengyudong</span><br><span class="line"><span class="number">128</span>  /home/domains/wspn.com/zhangjiayue</span><br><span class="line"><span class="number">124</span>  /home/domains/wspn.com/wangzhe</span><br></pre></td></tr></table></figure></p>
-<p>֮�󣬽�����Ӧ�û�Ŀ¼��ִ����������ɣ�<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find -ctime +<span class="number">30</span> | xargs rm</span><br></pre></td></tr></table></figure></p>
+        <p>首先，在root权限下，可以采用命令来对服务器上的用户根据邮件大小进行排序。例如，使用如下指令可以取出占用空间最大的10个用户：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ du <span class="operator">-s</span> /home/domains/wspn.com/ *|sort -rn|head</span><br></pre></td></tr></table></figure></p>
+<p>会得到如下列表：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5020</span> /home/domains/wspn.com/pengtao</span><br><span class="line"><span class="number">3612</span> /home/domains/wspn.com/zhupengbo</span><br><span class="line"><span class="number">1768</span> /home/domains/wspn.com/liulibin</span><br><span class="line"><span class="number">216</span>  /home/domains/wspn.com/xuruiqiang</span><br><span class="line"><span class="number">168</span>  /home/domains/wspn.com/xiaoshan</span><br><span class="line"><span class="number">168</span>  /home/domains/wspn.com/gejiajun</span><br><span class="line"><span class="number">132</span>  /home/domains/wspn.com/rickyxrq</span><br><span class="line"><span class="number">132</span>  /home/domains/wspn.com/fengyudong</span><br><span class="line"><span class="number">128</span>  /home/domains/wspn.com/zhangjiayue</span><br><span class="line"><span class="number">124</span>  /home/domains/wspn.com/wangzhe</span><br></pre></td></tr></table></figure></p>
+<p>之后，进入相应用户目录，执行下列命令即可：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ find -ctime +<span class="number">30</span> | xargs rm</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -336,6 +336,10 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+	</div>
+
       
 
       
