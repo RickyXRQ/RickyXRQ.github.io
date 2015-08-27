@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Ricky's Hexo">
 <meta property="og:description" content="刚开始尝试搭建自己的个人博客大概是在大二那会儿，那时候基本上个人博客偷懒的方法都用wordpress，于是一开始我也只是在本机搭建了wordpress环境，初步接触了下wordpress和个人博客的搭建。大四保研后除了一份儿简单的实习外基本没什么操心的地方，才决定购买域名并且搭建自己的个人博客。因为之前对wordpress比较熟悉，所以基本上花了一天就搭好了自己简单的个人博客。渐渐地，发现身边很多">
 <meta property="og:image" content="http://yoursite.com/img/2015082401.jpg">
-<meta property="og:updated_time" content="2015-08-27T12:33:36.054Z">
+<meta property="og:updated_time" content="2015-08-27T12:35:02.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建Github静态博客">
 <meta name="twitter:description" content="刚开始尝试搭建自己的个人博客大概是在大二那会儿，那时候基本上个人博客偷懒的方法都用wordpress，于是一开始我也只是在本机搭建了wordpress环境，初步接触了下wordpress和个人博客的搭建。大四保研后除了一份儿简单的实习外基本没什么操心的地方，才决定购买域名并且搭建自己的个人博客。因为之前对wordpress比较熟悉，所以基本上花了一天就搭好了自己简单的个人博客。渐渐地，发现身边很多">
@@ -224,7 +224,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>刚开始尝试搭建自己的个人博客大概是在大二那会儿，那时候基本上个人博客偷懒的方法都用wordpress，于是一开始我也只是在本机搭建了wordpress环境，初步接触了下wordpress和个人博客的搭建。大四保研后除了一份儿简单的实习外基本没什么操心的地方，才决定购买域名并且搭建自己的个人博客。因为之前对wordpress比较熟悉，所以基本上花了一天就搭好了自己简单的个人博客。<br>渐渐地，发现身边很多人都抛弃了wordpress，包括带我走进个人博客世界的几位大神，身边也陆续有同学用Hexo开通了自己的个人博客。而我因为懒惰迟迟没有去了解Hexo，最近实验室有一位小伙伴也要开通自己的wordpress个人博客，趁着给他讲域名购买和虚拟主机购买的工夫，我去了解了一下Hexo，并且搭建了自己的Hexo个人博客。本来想分分钟搞定的事儿，没想到竟然让我忙了三个多小时。其间碰到了一些比较奇怪的错误，经过一番搜索才找到解决的办法，在这里一一列举，希望能帮大家少走些弯路。<br><a id="more"></a></p>
-<h2 id="准备工作">准备工作</h2><p>在搭建的过程中我用的环境是64位windows 7，因为担心半路倒是查岗得随时打开某些windows下的东西，所以并没有在Linux平台上完成。首先，需要安装Node JS与Git Bash，比较坑爹的是Git官方网站提供的下载链接会跳转至amazonaws.com，而在兲朝并不能顺利访问，最后还是在一个国内的网站下载的一个极老的Git。另外，须在Github上注册自己的账户~因为这儿为了简单，就按照[<a href="http://username.github.io]的格式来搭建，并没有想解析到个人购买的网址上去。" target="_blank" rel="external">http://username.github.io]的格式来搭建，并没有想解析到个人购买的网址上去。</a></p>
+<h2 id="准备工作">准备工作</h2><p>在搭建的过程中我用的环境是64位windows 7，因为担心半路倒是查岗得随时打开某些windows下的东西，所以并没有在Linux平台上完成。首先，需要安装Node JS与Git Bash，比较坑爹的是Git官方网站提供的下载链接会跳转至amazonaws.com，而在兲朝并不能顺利访问，最后还是在一个国内的网站下载的一个极老的Git。另外，须在Github上注册自己的账户~因为这儿为了简单，就按照<a href="">http://username.github.io</a>的格式来搭建，并没有想解析到个人购买的网址上去。</p>
 <h2 id="搭建过程">搭建过程</h2><p>首先，需要在本机上配置和使用Github，包括配置SSH keys、添加SSH Key到Github和设置用户信息。相信大部分人都已经提前配好了这些东西，就不再赘述。<br>其次，在Github上建立前缀与自己Github用户名相同的Repository，如我的Github账户名是RickyXRQ，因此我简历的Repository名字是RickyXRQ.github.io。<br>接着，在创建好Github Repository后，需要在本机上配置Hexo：首先在本机上创建文件夹“Hexo”，然后在此文件夹中点击右键，选择Git Bash。然后输入以下指令来安装hexo：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure></p>
 <p>另外，进行初始化：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
 <p>同时，安装依赖包：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
