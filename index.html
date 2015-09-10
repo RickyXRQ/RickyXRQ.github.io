@@ -208,6 +208,60 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-管理你的Linux桌面启动器" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/09/10/管理你的Linux桌面启动器/" class="article-date">
+  	<time datetime="2015-09-10T08:28:44.000Z" itemprop="datePublished">2015-09-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/10/管理你的Linux桌面启动器/">管理你的Linux桌面启动器</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果想在Linux上方便地打开一个频繁使用的程序，可能最常见的手段就是把它放在桌面左侧的快速启动栏了。<br>例如，最近在我的Ubuntu系统下安装了Sublime Text 2后，因为是从官网下载压缩包安装的，因此采用的启动方法是将sublime text 2与/usr/bin/sublime进行链接：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln <span class="operator">-s</span> /usr/lib/Sublime\ Text\ <span class="number">2</span>/sublime_text /usr/bin/sublime</span><br></pre></td></tr></table></figure></p>
+<p>然后在终端执行sublime后即可以启动sublime。<br>在启动sublime后，左侧的快速启动栏会出现相应的图标，右击并且点选“锁定到启动器”后即可比较快速的启动sublime。<br>但是，往往锁定到启动器后的效果是这样的：<br><img src="/img/2015091001.jpg" alt=""><br>突然间好奇启动器是由Linux中哪个文件来管理的，于是就又详细的了解了下：<br>在当前用户的~/.local/share/applications中，储存着启动器的各项信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ricky@XPS:~/.local/share/applications$ ls</span><br><span class="line">chrome.desktop google-chrome-stable.desktop mimeapps.list sublime.desktop</span><br></pre></td></tr></table></figure></p>
+<p>打开sublime.desktop后可以看到如下内容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Encoding=UTF-<span class="number">8</span></span><br><span class="line">Version=<span class="number">1.0</span></span><br><span class="line">Type=Application</span><br><span class="line">Name=Sublime Text <span class="number">2</span></span><br><span class="line">Icon=sublime_text.png</span><br><span class="line">Path=/home/ricky</span><br><span class="line">Exec=sublime</span><br><span class="line">StartupNotify=<span class="literal">false</span></span><br><span class="line">StartupWMClass=Sublime</span><br><span class="line">OnlyShowIn=Unity;</span><br><span class="line">X-UnityGenerated=<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>可以看到这个配置文件包含了启动器一个项目的版本，名称，类型，图标等配置信息。而从SublimeText官网上下载的压缩包里已经包含各个分辨率的icon，做相应替换即可：<br>将Icon=sublime_text.png改为Icon=/usr/lib/Sublime Text 2/Icon/48x48/sublime_text.png后即可发现启动器中SublimeText的图标已经达到了我们想要的效果。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-DIABLO-3-Patch-2-3-0-will-be-released-today" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -731,62 +785,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/1990/10/17/hello-world/" class="article-date">
-  	<time datetime="1990-10-16T22:08:10.000Z" itemprop="datePublished">1990-10-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/1990/10/17/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html">Writing</a></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/1990/10/17/hello-world/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
