@@ -128,7 +128,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Milestone/" style="font-size: 15px;">Milestone</a> <a href="/tags/Pick-Up/" style="font-size: 10px;">Pick Up</a> <a href="/tags/windows/" style="font-size: 15px;">windows</a> <a href="/tags/www/" style="font-size: 15px;">www</a>
+						<a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Milestone/" style="font-size: 15px;">Milestone</a> <a href="/tags/Pick-Up/" style="font-size: 10px;">Pick Up</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/windows/" style="font-size: 15px;">windows</a> <a href="/tags/www/" style="font-size: 15px;">www</a>
 					</div>
 				</section>
 				
@@ -207,6 +207,64 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Python网络爬虫入门笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/09/21/Python网络爬虫入门笔记/" class="article-date">
+  	<time datetime="2015-09-21T13:49:15.000Z" itemprop="datePublished">2015-09-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/21/Python网络爬虫入门笔记/">Python网络爬虫入门笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近一段时间学习了下Python网络爬虫的相关内容，对爬虫有了一点感性的认识。为了督促自己学习防止眼高手低，特意写了这篇文章来加深学习。参考文章主要有<a href="http://doc.scrapy.org/en/latest/index.html">Scrapy at a glance</a>与<a href="http://blog.csdn.net/column/details/why-bug.html">专栏：Python爬虫入门教程</a>。<br>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/09/21/Python网络爬虫入门笔记/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-管理你的Linux桌面启动器" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -719,62 +777,6 @@
         <p class="article-more-link">
           <a  href="/2015/04/21/wav声音文件的二三事/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2014/05/07/在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境/" class="article-date">
-  	<time datetime="2014-05-07T14:25:11.000Z" itemprop="datePublished">2014-05-07</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/05/07/在windows-8-1下配置Xilinx-ISE-14-6的ISim仿真环境/">在windows 8.1下配置Xilinx ISE 14.6的ISim仿真环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>windows 8.1下的Xilinx ISE 14.6无法成功地调用自带的ISim模拟器，报错结果如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ Time Resolution <span class="keyword">for</span> simulation is <span class="number">1</span>ps.</span><br><span class="line">$ Waiting <span class="keyword">for</span> <span class="number">3</span> sub-compilation(s) to finish…</span><br><span class="line"></span><br><span class="line">$ ERROR:Simulator:<span class="number">861</span> – Failed to link the design</span><br><span class="line">$ Process “Simulate Behavioral Model” failed</span><br></pre></td></tr></table></figure></p>
-<p>经过近一天的摸索，发现原因是ISim调用的是安装Xilinx ISE 14.6自带的MinGW来link的，而Windows 8.1不支持低版本的MinGW。为了能成功调用ISim，需要更新MinGW，默认的MinGW的安装路径是…\Xilinx\14.4\ISE_DS\ISE\gnu\MinGW\5.0.0\nt。新版本的MinGW的下载地址为：<a href="http://sourceforge.net/projects/mingw/files/OldFiles/MinGW%205.1.4/MinGW-5.1.4.exe/download?use_mirror=iweb" target="_blank" rel="external">http://sourceforge.net/projects/mingw/files/OldFiles/MinGW%205.1.4/MinGW-5.1.4.exe/download?use_mirror=iweb</a>. 下载成功后安装并且将安装内容替换Xilinx ISE 14.6安装后自带的MingGW即可。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
-	</div>
-
-      
-
       
       <div class="clearfix"></div>
     </div>
