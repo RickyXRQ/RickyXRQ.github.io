@@ -3,17 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ricky&#39;s Hexo</title>
+  <title>Python网络爬虫入门笔记--Scrapy与MongoDB数据库 | Ricky&#39;s Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Ricky&apos;s Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ricky's Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="很多时候，爬虫爬取的结果并不是直接保存在本地的文件中，而是通过调用数据库来进行保存。以下简单介绍下Scrapy利用MongoDB数据库来保存爬取的数据。
+安装与配置MongoDB数据库这里仅介绍windows平台下的MongoDB数据库的安装和使用方法。首先，在MongoDB官网下载最新的安装包(v3.0.6)。但是由于网络问题，这个地址下载了好多次都没能成功。在这个地址下载到了最新版本(v3.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python网络爬虫入门笔记--Scrapy与MongoDB数据库">
+<meta property="og:url" content="http://yoursite.com/2015/10/08/Python网络爬虫入门笔记-Scrapy与MongoDB数据库/index.html">
 <meta property="og:site_name" content="Ricky's Hexo">
-<meta property="og:description" content="Ricky&apos;s Blog">
+<meta property="og:description" content="很多时候，爬虫爬取的结果并不是直接保存在本地的文件中，而是通过调用数据库来进行保存。以下简单介绍下Scrapy利用MongoDB数据库来保存爬取的数据。
+安装与配置MongoDB数据库这里仅介绍windows平台下的MongoDB数据库的安装和使用方法。首先，在MongoDB官网下载最新的安装包(v3.0.6)。但是由于网络问题，这个地址下载了好多次都没能成功。在这个地址下载到了最新版本(v3.0">
+<meta property="og:image" content="http://yoursite.com/img/Scrapy&Mongo/2015100801.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Scrapy&Mongo/2015100802.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Scrapy&Mongo/2015100803.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Scrapy&Mongo/2015100804.jpg">
+<meta property="og:updated_time" content="2015-10-08T11:13:12.818Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ricky's Hexo">
-<meta name="twitter:description" content="Ricky&apos;s Blog">
+<meta name="twitter:title" content="Python网络爬虫入门笔记--Scrapy与MongoDB数据库">
+<meta name="twitter:description" content="很多时候，爬虫爬取的结果并不是直接保存在本地的文件中，而是通过调用数据库来进行保存。以下简单介绍下Scrapy利用MongoDB数据库来保存爬取的数据。
+安装与配置MongoDB数据库这里仅介绍windows平台下的MongoDB数据库的安装和使用方法。首先，在MongoDB官网下载最新的安装包(v3.0.6)。但是由于网络问题，这个地址下载了好多次都没能成功。在这个地址下载到了最新版本(v3.0">
   
     <link rel="alternative" href="/atom.xml" title="Ricky&#39;s Hexo" type="application/atom+xml">
   
@@ -206,9 +214,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Python网络爬虫入门笔记-Scrapy与MongoDB数据库" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Python网络爬虫入门笔记-Scrapy与MongoDB数据库" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/10/08/Python网络爬虫入门笔记-Scrapy与MongoDB数据库/" class="article-date">
@@ -224,12 +230,23 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/08/Python网络爬虫入门笔记-Scrapy与MongoDB数据库/">Python网络爬虫入门笔记--Scrapy与MongoDB数据库</a>
+    <h1 class="article-title" itemprop="name">
+      Python网络爬虫入门笔记--Scrapy与MongoDB数据库
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -256,559 +273,42 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/09/21/Python网络爬虫入门笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python网络爬虫入门笔记--爬虫框架Scrapy的简单应用</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-Python网络爬虫入门笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/21/Python网络爬虫入门笔记/" class="article-date">
-  	<time datetime="2015-09-21T13:49:15.000Z" itemprop="datePublished">2015-09-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/21/Python网络爬虫入门笔记/">Python网络爬虫入门笔记--爬虫框架Scrapy的简单应用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近一段时间学习了下Python网络爬虫的相关内容，对爬虫有了一点感性的认识。为了督促自己学习防止眼高手低，特意写了这篇文章来加深学习。参考文章主要有<a href="http://doc.scrapy.org/en/latest/index.html">Scrapy at a glance</a>与<a href="http://blog.csdn.net/column/details/why-bug.html">专栏：Python爬虫入门教程</a>与<a href="http://blog.csdn.net/column/details/younghz-scrapy.html">专栏：Scrapy</a>.<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-      
 
-      
-        <p class="article-more-link">
-          <a  href="/2015/09/21/Python网络爬虫入门笔记/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
 
 
 
-
-
-
-
-  
-    <article id="post-管理你的Linux桌面启动器" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/09/10/管理你的Linux桌面启动器/" class="article-date">
-  	<time datetime="2015-09-10T08:28:44.000Z" itemprop="datePublished">2015-09-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/10/管理你的Linux桌面启动器/">管理你的Linux桌面启动器</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如果想在Linux上方便地打开一个频繁使用的程序，可能最常见的手段就是把它放在桌面左侧的快速启动栏了。<br>例如，最近在我的Ubuntu系统下安装了Sublime Text 2后，因为是从官网下载压缩包安装的，因此采用的启动方法是将sublime text 2与/usr/bin/sublime进行链接：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ln <span class="operator">-s</span> /usr/lib/Sublime\ Text\ <span class="number">2</span>/sublime_text /usr/bin/sublime</span><br></pre></td></tr></table></figure></p>
-<p>然后在终端执行sublime后即可以启动sublime。<br>在启动sublime后，左侧的快速启动栏会出现相应的图标，右击并且点选“锁定到启动器”后即可比较快速的启动sublime。<br>但是，往往锁定到启动器后的效果是这样的：<br><img src="/img/2015091001.jpg" alt=""><br>突然间好奇启动器是由Linux中哪个文件来管理的，于是就又详细的了解了下：<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/09/10/管理你的Linux桌面启动器/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-DIABLO-3-Patch-2-3-0-will-be-released-today" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/28/DIABLO-3-Patch-2-3-0-will-be-released-today/" class="article-date">
-  	<time datetime="2015-08-28T01:30:31.000Z" itemprop="datePublished">2015-08-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/28/DIABLO-3-Patch-2-3-0-will-be-released-today/">DIABLO 3 Patch 2.3.0 will be released today!</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在上个版本刷了200个小时的野蛮人后，把5+3 build基本达到了毕业的程度，然后就选择了AFK。<br>今天，Patch 2.3.0终于要发布了，国服也相应地会同步开始第四赛季S4。<br><img src="http://bnetcmsus-a.akamaihd.net/cms/blog_header/ux/UX9MW0E436OC1440435261329.jpg" alt="Diablo 3 Patch 2.3.0"><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Milestone/">Milestone</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/28/DIABLO-3-Patch-2-3-0-will-be-released-today/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-将hexo搭建的博客绑定至子域名" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/27/将hexo搭建的博客绑定至子域名/" class="article-date">
-  	<time datetime="2015-08-27T14:45:06.000Z" itemprop="datePublished">2015-08-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/27/将hexo搭建的博客绑定至子域名/">将hexo搭建的博客绑定至子域名</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>首先，在/Hexo/source中建立无后缀名的文件CNAME，内容为要解析的子域名(即hexo.rickyxu.me)。<br>其次，在Godaddy的域名管理中，建立Record Type为“CNAME”，Host为“Hexo”且Points To为“hexo.rickyxu.me”的Zone Record，如图所示：<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/www/">www</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/27/将hexo搭建的博客绑定至子域名/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-My-first-Hexo-article" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/25/My-first-Hexo-article/" class="article-date">
-  	<time datetime="2015-08-25T02:40:52.000Z" itemprop="datePublished">2015-08-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/25/My-first-Hexo-article/">My first Hexo article</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>This is my first Hexo article.</p>
-<p>I find that Hexo is much more convenient than wordpress.</p>
-<p>My wordpress blog is at <a href="http://RickyXu.me">Asylum!:http://RickyXu.me</a>.</p>
-<p>I bought the website on Godaddy and rent the virtual server at <a href="http://my.zhuji.gd/aff.php?aff=209">主机格调</a><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Milestone/">Milestone</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/25/My-first-Hexo-article/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Hexo搭建Github静态博客" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/24/Hexo搭建Github静态博客/" class="article-date">
-  	<time datetime="2015-08-24T11:43:25.000Z" itemprop="datePublished">2015-08-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/24/Hexo搭建Github静态博客/">Hexo搭建Github静态博客</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>刚开始尝试搭建自己的个人博客大概是在大二那会儿，那时候基本上个人博客偷懒的方法都用wordpress，于是一开始我也只是在本机搭建了wordpress环境，初步接触了下wordpress和个人博客的搭建。大四保研后除了一份儿简单的实习外基本没什么操心的地方，才决定购买域名并且搭建自己的个人博客。因为之前对wordpress比较熟悉，所以基本上花了一天就搭好了自己简单的个人博客。<br>渐渐地，发现身边很多人都抛弃了wordpress，包括带我走进个人博客世界的几位大神，身边也陆续有同学用Hexo开通了自己的个人博客。而我因为懒惰迟迟没有去了解Hexo，最近实验室有一位小伙伴也要开通自己的wordpress个人博客，趁着给他讲域名购买和虚拟主机购买的工夫，我去了解了一下Hexo，并且搭建了自己的Hexo个人博客。本来想分分钟搞定的事儿，没想到竟然让我忙了三个多小时。其间碰到了一些比较奇怪的错误，经过一番搜索才找到解决的办法，在这里一一列举，希望能帮大家少走些弯路。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/www/">www</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/24/Hexo搭建Github静态博客/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Tour-de-Qinghai-Lake-菜鸟的环青海湖骑行攻略" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/08/09/Tour-de-Qinghai-Lake-菜鸟的环青海湖骑行攻略/" class="article-date">
-  	<time datetime="2015-08-09T08:36:24.000Z" itemprop="datePublished">2015-08-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/09/Tour-de-Qinghai-Lake-菜鸟的环青海湖骑行攻略/">Tour de Qinghai Lake|菜鸟的环青海湖骑行攻略</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>环青海湖回来也有一段时间了。鉴于这次环青海湖相对来说比较成功，自我感觉准备得也比较出色，这儿写一篇作业吧~<br>我们一行共7人，其中男生6名，女生1名，几乎全部都是我邮校友，也几乎全都是在校学生。行程一共4日（仅环湖）。以下是细节~<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Milestone/">Milestone</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/08/09/Tour-de-Qinghai-Lake-菜鸟的环青海湖骑行攻略/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-为文件夹建立-txt的树形目录" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/05/12/为文件夹建立-txt的树形目录/" class="article-date">
-  	<time datetime="2015-05-12T11:21:21.000Z" itemprop="datePublished">2015-05-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/12/为文件夹建立-txt的树形目录/">为文件夹建立.txt的树形目录</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在控制台中转到要建立目录的文件夹位置，输入 tree/f &gt;index.txt 即可。或者下载<a href="http://pan.baidu.com/s/1dDtJyqH" target="_blank" rel="external">附件</a>到想要创建目录的文件夹目录，运行即可。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Extmail-for-Linux-CentOS-5" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/05/11/Extmail-for-Linux-CentOS-5/" class="article-date">
-  	<time datetime="2015-05-11T14:33:24.000Z" itemprop="datePublished">2015-05-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/11/Extmail-for-Linux-CentOS-5/">Extmail for Linux CentOS 5</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="配置环境">配置环境</h2><p>整个配置过程要求在root身份下进行，并且在配置过程中，如果没有特别的更换文件目录的情况，最好用 “cd ~”指令切换当前目录；<br>参考 <a href="http://wiki.extmail.org/extmail_solution_for_linux_centos-5">http://wiki.extmail.org/extmail_solution_for_linux_centos-5</a> 的extmail_solution_for_linux_cenos-5参考文档，并且采用的邮箱服务器为32bit的CentOS系统。且SELinux处于禁用状态。</p>
-<h2 id="具体过程">具体过程</h2><h3 id="制作yum仓库">制作yum仓库</h3><p>安装所需要的基础服务的rpm包，键入以下指令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install httpd mysql mysql-server mysql-devel openssl-devel dovecot perl-DBD-MySQL tcl tcl-devel libart_lgpl libart_lgpl-devel libtool-ltdl libtool-ltdl-devel expect</span><br></pre></td></tr></table></figure></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/05/11/Extmail-for-Linux-CentOS-5/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -837,8 +337,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
