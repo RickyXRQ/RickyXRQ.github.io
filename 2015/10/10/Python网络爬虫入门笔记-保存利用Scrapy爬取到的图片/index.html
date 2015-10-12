@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>将hexo搭建的博客绑定至子域名 | Ricky&#39;s Hexo</title>
+  <title>Python网络爬虫入门笔记--保存利用Scrapy爬取到的图片 | Ricky&#39;s Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先，在/Hexo/source中建立无后缀名的文件CNAME，内容为要解析的子域名(即hexo.rickyxu.me)。其次，在Godaddy的域名管理中，建立Record Type为“CNAME”，Host为“Hexo”且Points To为“hexo.rickyxu.me”的Zone Record，如图所示：">
+  <meta name="description" content="有了前两篇文章的基础，现在我们已经可以利用Scrapy编写简单的爬虫，并且将爬取到的内容保存到数据库中。但是网上的资源并不限于仅仅有链接和文字。在这篇文章中，我参考一个爬取一个图片网站的工程的范例，了解利用pipelines来保存爬取到的链接的图片。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将hexo搭建的博客绑定至子域名">
-<meta property="og:url" content="http://yoursite.com/2015/08/27/将hexo搭建的博客绑定至子域名/index.html">
+<meta property="og:title" content="Python网络爬虫入门笔记--保存利用Scrapy爬取到的图片">
+<meta property="og:url" content="http://yoursite.com/2015/10/10/Python网络爬虫入门笔记-保存利用Scrapy爬取到的图片/index.html">
 <meta property="og:site_name" content="Ricky's Hexo">
-<meta property="og:description" content="首先，在/Hexo/source中建立无后缀名的文件CNAME，内容为要解析的子域名(即hexo.rickyxu.me)。其次，在Godaddy的域名管理中，建立Record Type为“CNAME”，Host为“Hexo”且Points To为“hexo.rickyxu.me”的Zone Record，如图所示：">
-<meta property="og:image" content="http://yoursite.com/img/2015082701.jpg">
-<meta property="og:updated_time" content="2015-08-27T15:11:33.368Z">
+<meta property="og:description" content="有了前两篇文章的基础，现在我们已经可以利用Scrapy编写简单的爬虫，并且将爬取到的内容保存到数据库中。但是网上的资源并不限于仅仅有链接和文字。在这篇文章中，我参考一个爬取一个图片网站的工程的范例，了解利用pipelines来保存爬取到的链接的图片。">
+<meta property="og:updated_time" content="2015-10-10T09:10:14.007Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="将hexo搭建的博客绑定至子域名">
-<meta name="twitter:description" content="首先，在/Hexo/source中建立无后缀名的文件CNAME，内容为要解析的子域名(即hexo.rickyxu.me)。其次，在Godaddy的域名管理中，建立Record Type为“CNAME”，Host为“Hexo”且Points To为“hexo.rickyxu.me”的Zone Record，如图所示：">
+<meta name="twitter:title" content="Python网络爬虫入门笔记--保存利用Scrapy爬取到的图片">
+<meta name="twitter:description" content="有了前两篇文章的基础，现在我们已经可以利用Scrapy编写简单的爬虫，并且将爬取到的内容保存到数据库中。但是网上的资源并不限于仅仅有链接和文字。在这篇文章中，我参考一个爬取一个图片网站的工程的范例，了解利用pipelines来保存爬取到的链接的图片。">
   
     <link rel="alternative" href="/atom.xml" title="Ricky&#39;s Hexo" type="application/atom+xml">
   
@@ -208,11 +207,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-将hexo搭建的博客绑定至子域名" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Python网络爬虫入门笔记-保存利用Scrapy爬取到的图片" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/08/27/将hexo搭建的博客绑定至子域名/" class="article-date">
-  	<time datetime="2015-08-27T14:45:06.000Z" itemprop="datePublished">2015-08-27</time>
+      <a href="/2015/10/10/Python网络爬虫入门笔记-保存利用Scrapy爬取到的图片/" class="article-date">
+  	<time datetime="2015-10-10T08:08:04.000Z" itemprop="datePublished">2015-10-10</time>
 </a>
     </div>
   
@@ -225,7 +224,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      将hexo搭建的博客绑定至子域名
+      Python网络爬虫入门笔记--保存利用Scrapy爬取到的图片
     </h1>
   
 
@@ -234,7 +233,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/www/">www</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</div>
 
         
@@ -245,7 +244,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>首先，在/Hexo/source中建立无后缀名的文件CNAME，内容为要解析的子域名(即hexo.rickyxu.me)。<br>其次，在Godaddy的域名管理中，建立Record Type为“CNAME”，Host为“Hexo”且Points To为“hexo.rickyxu.me”的Zone Record，如图所示：<br><a id="more"></a><br><img src="/img/2015082701.jpg" alt=""><br>最后，执行hexo generate与hexo deploy即可。</p>
+        <p>有了前两篇文章的基础，现在我们已经可以利用Scrapy编写简单的爬虫，并且将爬取到的内容保存到数据库中。但是网上的资源并不限于仅仅有链接和文字。在这篇文章中，我参考一个爬取一个图片网站的工程的<a href="https://github.com/ZhangBohan/fun_crawler" target="_blank" rel="external">范例</a>，了解利用pipelines来保存爬取到的链接的图片。<br><a id="more"></a><br>相信有了前两篇文章中爬虫工程的经验，现在对爬虫的认识已经集中到了spiders、pipelines、settings和items这四个方面上。因此现在就逐一分析以上四个文件的实现。</p>
+<h2 id="items">items</h2><p>items的编写算是这几个对象编写中最容易的一个了，无非是导入相关的库文件然后定义一个我们要爬取的类。该工程的items.py的编写如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Define here the models for your scraped items</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># See documentation in:</span></span><br><span class="line"><span class="comment"># http://doc.scrapy.org/en/latest/topics/items.html</span></span><br><span class="line"></span><br><span class="line">import scrapy</span><br><span class="line">from scrapy.contrib.loader import ItemLoader</span><br><span class="line">from scrapy.contrib.loader.processor import MapCompose, TakeFirst, Join</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class MeizituItem(scrapy.Item):</span><br><span class="line">    url = scrapy.Field()</span><br><span class="line">    name = scrapy.Field()</span><br><span class="line">    tags = scrapy.Field()</span><br><span class="line">    image_urls = scrapy.Field()</span><br><span class="line">    images = scrapy.Field()</span><br></pre></td></tr></table></figure></p>
+<p>从中可以看出，定义的items类包含了url、name、tags、image_urls和images这几个成员。</p>
+<h2 id="settings">settings</h2><p>结合前几个爬虫工程，我对settings文件的认识是“对工程所采用的方法的声明”。如采用什么样的pipelines等。该工程的settings文件如下所示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Scrapy settings for fun project</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># For simplicity, this file contains only the most important settings by</span></span><br><span class="line"><span class="comment"># default. All the other settings are documented here:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     http://doc.scrapy.org/en/latest/topics/settings.html</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line">BOT_NAME = <span class="string">'fun_crawler'</span></span><br><span class="line"></span><br><span class="line">SPIDER_MODULES = [<span class="string">'fun_crawler.spiders'</span>]</span><br><span class="line">NEWSPIDER_MODULE = <span class="string">'fun_crawler.spiders'</span></span><br><span class="line"></span><br><span class="line">ITEM_PIPELINES = &#123;<span class="string">'fun_crawler.pipelines.ImageDownloadPipeline'</span>: <span class="number">1</span>&#125;</span><br><span class="line"></span><br><span class="line">IMAGES_STORE = <span class="string">'/tmp/images'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">DOWNLOAD_DELAY = <span class="number">0.25</span>    <span class="comment"># 250 ms of delay</span></span><br></pre></td></tr></table></figure></p>
+<p>从中可以看出，比较关键的几点是对使用的pipelines的声明、对下载图片链接的声明和下载延时的设置。</p>
+<h2 id="pipelines">pipelines</h2><p>结合前几个简单的scrapy爬虫工程，我对pipelines的理解是“对爬取到的Item的再加工”。</p>
 
       
     </div>
@@ -255,18 +259,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/08/28/DIABLO-3-Patch-2-3-0-will-be-released-today/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          DIABLO 3 Patch 2.3.0 will be released today!
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/08/25/My-first-Hexo-article/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">My first Hexo article</div>
+    <a href="/2015/10/08/Python网络爬虫入门笔记-Scrapy与MongoDB数据库/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python网络爬虫入门笔记--Scrapy与MongoDB数据库</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
